@@ -48,7 +48,7 @@ del rates_df['province']
 del rates_df['Province']
 del rates_df['capital']
 
-rates_df.to_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\clean_provincial_data.csv')
+rates_df.to_csv(r'C:\clean_provincial_data.csv')
 
 #**********************************************************************************************************************
 
