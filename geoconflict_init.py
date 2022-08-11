@@ -30,10 +30,10 @@ pd.set_option('display.max_columns', None)
 #**********************************************************************************************************************
 
 # Reading in datasets/shapefiles
-raw_df = pd.read_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\conflict_data_afg.csv')
-provincial_df = pd.read_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\provincial_data_afg.csv')
-regions1 = gpd.read_file(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\afg_shapefiles\AFG_adm1.shp')
-regions2 = gpd.read_file(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\afg_shapefiles\AFG_adm2.shp')
+raw_df = pd.read_csv(r'C:\conflict_data_afg.csv')
+provincial_df = pd.read_csv(r'C:\provincial_data_afg.csv')
+regions1 = gpd.read_file(r'C:\AFG_adm1.shp')
+regions2 = gpd.read_file(r'C:\AFG_adm2.shp')
 # airports = gpd.read_file(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\afg_shapefiles\hotosm_afg_airports_points.dbf')
 
 # Subsetting dataset
@@ -216,10 +216,10 @@ for i in range(len(df)):
             df_arr[i][0] = regions2.NAME_2[j:j+1].item()
 
 district_df = pd.DataFrame(df_arr)
-district_df.to_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\district_df.csv', index=False)    
+district_df.to_csv(r'C:\district_df.csv', index=False)    
 
 df['adm_2'] = district_df['adm_2']
-df.to_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\clean_conflict_data_afg.csv', index=False)    
+df.to_csv(r'C:\clean_conflict_data_afg.csv', index=False)    
 
 
 
@@ -251,7 +251,7 @@ df = df.merge(provincial_df, left_on=df.adm_1, right_on=provincial_df.Province)
 del df["key_0"]
 
 # Exporting clean CSV file;
-df.to_csv(r'C:\Users\Slaye\Documents\Analysis Projects\STAT_3120\Final_project\clean_conflict_data_afg.csv', index=False)    
+df.to_csv(r'C:\clean_conflict_data_afg.csv', index=False)    
 
 
 
