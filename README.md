@@ -1,6 +1,8 @@
 # Main Research Focus
 The main focus of the research is to determine the spatial distribution of high concentrations of conflict in Afghanistan following the 2001 invasion by NATO coalition forces.
 
+Poster presentation is accessible by download (A Geospatial Analysis of Conflict in Afghanistan.pptx)
+
 ## Methods
 I used spatial autocorrelation and density clustering methods to find patterns of spatial distribution in the data. I also calculated the distance of each individual event and its proximity to the nearest provincial capital and the nearest national highway. Spatial autocorrelation was determined by a Moran Plot and Moran's *I*, which evaulates a district's value compared to the average value of its neighbor. A Density-based Spatial Clustering of Applications (DBSCAN) model was used as a complementary method. This detected the clusters of conflict event based on the density of latitude/longitude coordinates. Choropleth maps were utilized to visualize the data derived from these models.
 
